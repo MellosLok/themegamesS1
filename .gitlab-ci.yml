@@ -1,0 +1,11 @@
+pages:
+  stage: deploy
+  script:
+    - mkdir .public
+    - cp spotlight_contest.html .public/index.html
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main 
